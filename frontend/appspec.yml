@@ -1,0 +1,10 @@
+version: 0.0
+os: linux
+files:
+  - source: /
+    destination: /home/ubuntu/app-workspace
+hooks:
+  AfterInstall:
+    - location: scripts/build_and_deploy.sh
+      timeout: 300
+      runas: root
